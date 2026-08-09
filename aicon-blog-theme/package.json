@@ -1,48 +1,23 @@
 {
-  "name": "aicon-blog-theme",
-  "version": "1.0.0",
-  "description": "Premium modern Blogger theme inspired by PixelOS, Material Design 3, and Linear.app",
+  "name": "aicon-tech-hub-theme",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A dark-first, dynamic Blogger XML theme for AiCoN Tech Hub.",
   "main": "blogger/theme.xml",
   "scripts": {
-    "lint": "echo 'No linter configured'",
-    "format": "echo 'No formatter configured'",
-    "validate": "echo 'Validating theme XML...' && xmllint --noout blogger/theme.xml && echo 'Theme XML is valid'",
-    "serve": "echo 'Use Blogger Draft or local server to preview'"
+    "validate": "python3 scripts/validate-theme.py",
+    "lint": "node --check ../preview.js",
+    "serve": "python3 -m http.server 4173 --bind 0.0.0.0"
   },
   "keywords": [
     "blogger",
-    "blogspot",
-    "theme",
-    "template",
-    "material-design",
-    "pixelos",
-    "linear-app",
-    "modern",
-    "responsive",
-    "dark-mode"
+    "blogger-theme",
+    "aicon",
+    "technology-publication",
+    "xml-theme"
   ],
-  "author": "AiCoN",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ccsalman545/AiCoN"
-  },
-  "bugs": {
-    "url": "https://github.com/ccsalman545/AiCoN/issues"
-  },
-  "homepage": "https://github.com/ccsalman545/AiCoN#readme",
-  "devDependencies": {
-    "xmllint": "^0.1.0"
-  },
   "engines": {
-    "node": ">=16.0.0"
-  },
-  "browserslist": [
-    "Chrome >= 90",
-    "Firefox >= 88",
-    "Safari >= 14",
-    "Edge >= 90",
-    "iOS >= 14",
-    "Android >= 90"
-  ]
+    "node": ">=18"
+  }
 }
